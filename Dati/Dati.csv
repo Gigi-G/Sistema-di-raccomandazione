@@ -1,0 +1,239 @@
+user_id,subject_id,subject_name,rating
+Base01,0,Calcolo Numerico,2
+Base02,0,Calcolo Numerico,1
+Base03,0,Calcolo Numerico,1
+Base04,0,Calcolo Numerico,4
+Base05,0,Calcolo Numerico,1
+Base06,0,Calcolo Numerico,1
+Base07,0,Calcolo Numerico,4
+Base08,0,Calcolo Numerico,3
+Base09,0,Calcolo Numerico,
+Base10,0,Calcolo Numerico,5
+Base11,0,Calcolo Numerico,2
+Base12,0,Calcolo Numerico,
+Base13,0,Calcolo Numerico,
+Base14,0,Calcolo Numerico,
+Base01,1,Computer Grafica,
+Base02,1,Computer Grafica,1
+Base03,1,Computer Grafica,1
+Base04,1,Computer Grafica,4
+Base05,1,Computer Grafica,2
+Base06,1,Computer Grafica,1
+Base07,1,Computer Grafica,5
+Base08,1,Computer Grafica,3
+Base09,1,Computer Grafica,5
+Base10,1,Computer Grafica,2
+Base11,1,Computer Grafica,
+Base12,1,Computer Grafica,
+Base13,1,Computer Grafica,
+Base14,1,Computer Grafica,
+Base01,2,Digital Forensics,
+Base02,2,Digital Forensics,1
+Base03,2,Digital Forensics,5
+Base04,2,Digital Forensics,5
+Base05,2,Digital Forensics,2
+Base06,2,Digital Forensics,1
+Base07,2,Digital Forensics,5
+Base08,2,Digital Forensics,3
+Base09,2,Digital Forensics,5
+Base10,2,Digital Forensics,3
+Base11,2,Digital Forensics,
+Base12,2,Digital Forensics,
+Base13,2,Digital Forensics,
+Base14,2,Digital Forensics,
+Base01,3,Informatica Musicale,4
+Base02,3,Informatica Musicale,1
+Base03,3,Informatica Musicale,1
+Base04,3,Informatica Musicale,3
+Base05,3,Informatica Musicale,2
+Base06,3,Informatica Musicale,1
+Base07,3,Informatica Musicale,5
+Base08,3,Informatica Musicale,
+Base09,3,Informatica Musicale,
+Base10,3,Informatica Musicale,2
+Base11,3,Informatica Musicale,4
+Base12,3,Informatica Musicale,
+Base13,3,Informatica Musicale,
+Base14,3,Informatica Musicale,
+Base01,4,Internet Security,
+Base02,4,Internet Security,1
+Base03,4,Internet Security,1
+Base04,4,Internet Security,5
+Base05,4,Internet Security,5
+Base06,4,Internet Security,5
+Base07,4,Internet Security,5
+Base08,4,Internet Security,5
+Base09,4,Internet Security,5
+Base10,4,Internet Security,2
+Base11,4,Internet Security,
+Base12,4,Internet Security,
+Base13,4,Internet Security,5
+Base14,4,Internet Security,5
+Base01,5,Introduzione al Data Mining,
+Base02,5,Introduzione al Data Mining,4
+Base03,5,Introduzione al Data Mining,5
+Base04,5,Introduzione al Data Mining,5
+Base05,5,Introduzione al Data Mining,5
+Base06,5,Introduzione al Data Mining,1
+Base07,5,Introduzione al Data Mining,4
+Base08,5,Introduzione al Data Mining,3
+Base09,5,Introduzione al Data Mining,5
+Base10,5,Introduzione al Data Mining,4
+Base11,5,Introduzione al Data Mining,5
+Base12,5,Introduzione al Data Mining,5
+Base13,5,Introduzione al Data Mining,
+Base14,5,Introduzione al Data Mining,
+Base01,6,IT Law,3
+Base02,6,IT Law,2
+Base03,6,IT Law,1
+Base04,6,IT Law,2
+Base05,6,IT Law,3
+Base06,6,IT Law,1
+Base07,6,IT Law,3
+Base08,6,IT Law,3
+Base09,6,IT Law,
+Base10,6,IT Law,3
+Base11,6,IT Law,
+Base12,6,IT Law,
+Base13,6,IT Law,
+Base14,6,IT Law,
+Base01,7,Laboratorio di Sistemi a Microcontrollore,4
+Base02,7,Laboratorio di Sistemi a Microcontrollore,2
+Base03,7,Laboratorio di Sistemi a Microcontrollore,1
+Base04,7,Laboratorio di Sistemi a Microcontrollore,5
+Base05,7,Laboratorio di Sistemi a Microcontrollore,2
+Base06,7,Laboratorio di Sistemi a Microcontrollore,1
+Base07,7,Laboratorio di Sistemi a Microcontrollore,5
+Base08,7,Laboratorio di Sistemi a Microcontrollore,
+Base09,7,Laboratorio di Sistemi a Microcontrollore,
+Base10,7,Laboratorio di Sistemi a Microcontrollore,1
+Base11,7,Laboratorio di Sistemi a Microcontrollore,5
+Base12,7,Laboratorio di Sistemi a Microcontrollore,
+Base13,7,Laboratorio di Sistemi a Microcontrollore,
+Base14,7,Laboratorio di Sistemi a Microcontrollore,
+Base01,8,Programmazione Mobile,1
+Base02,8,Programmazione Mobile,5
+Base03,8,Programmazione Mobile,5
+Base04,8,Programmazione Mobile,4
+Base05,8,Programmazione Mobile,4
+Base06,8,Programmazione Mobile,3
+Base07,8,Programmazione Mobile,5
+Base08,8,Programmazione Mobile,4
+Base09,8,Programmazione Mobile,5
+Base10,8,Programmazione Mobile,2
+Base11,8,Programmazione Mobile,
+Base12,8,Programmazione Mobile,
+Base13,8,Programmazione Mobile,
+Base14,8,Programmazione Mobile,
+Base01,9,Programmazione Parallela su Architetture GPU,3
+Base02,9,Programmazione Parallela su Architetture GPU,4
+Base03,9,Programmazione Parallela su Architetture GPU,1
+Base04,9,Programmazione Parallela su Architetture GPU,4
+Base05,9,Programmazione Parallela su Architetture GPU,2
+Base06,9,Programmazione Parallela su Architetture GPU,1
+Base07,9,Programmazione Parallela su Architetture GPU,5
+Base08,9,Programmazione Parallela su Architetture GPU,4
+Base09,9,Programmazione Parallela su Architetture GPU,5
+Base10,9,Programmazione Parallela su Architetture GPU,2
+Base11,9,Programmazione Parallela su Architetture GPU,
+Base12,9,Programmazione Parallela su Architetture GPU,
+Base13,9,Programmazione Parallela su Architetture GPU,
+Base14,9,Programmazione Parallela su Architetture GPU,
+Base01,10,Sistemi Centrali,2
+Base02,10,Sistemi Centrali,2
+Base03,10,Sistemi Centrali,1
+Base04,10,Sistemi Centrali,5
+Base05,10,Sistemi Centrali,3
+Base06,10,Sistemi Centrali,1
+Base07,10,Sistemi Centrali,5
+Base08,10,Sistemi Centrali,
+Base09,10,Sistemi Centrali,5
+Base10,10,Sistemi Centrali,2
+Base11,10,Sistemi Centrali,
+Base12,10,Sistemi Centrali,
+Base13,10,Sistemi Centrali,
+Base14,10,Sistemi Centrali,
+Base01,11,Social Media Management,5
+Base02,11,Social Media Management,
+Base03,11,Social Media Management,5
+Base04,11,Social Media Management,4
+Base05,11,Social Media Management,4
+Base06,11,Social Media Management,1
+Base07,11,Social Media Management,5
+Base08,11,Social Media Management,4
+Base09,11,Social Media Management,3
+Base10,11,Social Media Management,2
+Base11,11,Social Media Management,5
+Base12,11,Social Media Management,3
+Base13,11,Social Media Management,2
+Base14,11,Social Media Management,4
+Base01,12,Startup d'Impresa e Modelli di Business,3
+Base02,12,Startup d'Impresa e Modelli di Business,1
+Base03,12,Startup d'Impresa e Modelli di Business,4
+Base04,12,Startup d'Impresa e Modelli di Business,3
+Base05,12,Startup d'Impresa e Modelli di Business,4
+Base06,12,Startup d'Impresa e Modelli di Business,1
+Base07,12,Startup d'Impresa e Modelli di Business,2
+Base08,12,Startup d'Impresa e Modelli di Business,2
+Base09,12,Startup d'Impresa e Modelli di Business,
+Base10,12,Startup d'Impresa e Modelli di Business,2
+Base11,12,Startup d'Impresa e Modelli di Business,1
+Base12,12,Startup d'Impresa e Modelli di Business,
+Base13,12,Startup d'Impresa e Modelli di Business,
+Base14,12,Startup d'Impresa e Modelli di Business,
+Base01,13,Sviluppo di Giochi Digitali,
+Base02,13,Sviluppo di Giochi Digitali,1
+Base03,13,Sviluppo di Giochi Digitali,1
+Base04,13,Sviluppo di Giochi Digitali,4
+Base05,13,Sviluppo di Giochi Digitali,3
+Base06,13,Sviluppo di Giochi Digitali,3
+Base07,13,Sviluppo di Giochi Digitali,5
+Base08,13,Sviluppo di Giochi Digitali,2
+Base09,13,Sviluppo di Giochi Digitali,5
+Base10,13,Sviluppo di Giochi Digitali,2
+Base11,13,Sviluppo di Giochi Digitali,
+Base12,13,Sviluppo di Giochi Digitali,
+Base13,13,Sviluppo di Giochi Digitali,
+Base14,13,Sviluppo di Giochi Digitali,
+Base01,14,Technologies for Advanced Programming,
+Base02,14,Technologies for Advanced Programming,5
+Base03,14,Technologies for Advanced Programming,1
+Base04,14,Technologies for Advanced Programming,4
+Base05,14,Technologies for Advanced Programming,3
+Base06,14,Technologies for Advanced Programming,3
+Base07,14,Technologies for Advanced Programming,5
+Base08,14,Technologies for Advanced Programming,5
+Base09,14,Technologies for Advanced Programming,5
+Base10,14,Technologies for Advanced Programming,2
+Base11,14,Technologies for Advanced Programming,4
+Base12,14,Technologies for Advanced Programming,
+Base13,14,Technologies for Advanced Programming,4
+Base14,14,Technologies for Advanced Programming,5
+Base01,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,
+Base02,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,2
+Base03,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,1
+Base04,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,4
+Base05,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,5
+Base06,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,5
+Base07,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,5
+Base08,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,4
+Base09,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,5
+Base10,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,2
+Base11,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,
+Base12,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,
+Base13,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,4
+Base14,15,Tecnologie per i sistemi Distribuiti e il Web e Laboratorio,4
+Base01,16,"Web Programming, Design & Usability",5
+Base02,16,"Web Programming, Design & Usability",4
+Base03,16,"Web Programming, Design & Usability",5
+Base04,16,"Web Programming, Design & Usability",4
+Base05,16,"Web Programming, Design & Usability",5
+Base06,16,"Web Programming, Design & Usability",5
+Base07,16,"Web Programming, Design & Usability",5
+Base08,16,"Web Programming, Design & Usability",4
+Base09,16,"Web Programming, Design & Usability",5
+Base10,16,"Web Programming, Design & Usability",2
+Base11,16,"Web Programming, Design & Usability",
+Base12,16,"Web Programming, Design & Usability",4
+Base13,16,"Web Programming, Design & Usability",4
+Base14,16,"Web Programming, Design & Usability",4
