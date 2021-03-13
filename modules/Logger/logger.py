@@ -25,4 +25,3 @@ class Logger:
 
     def info(self, message: str) -> None:
         self.__logger.info(message)
-        pass
