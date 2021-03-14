@@ -2,22 +2,14 @@
 # pylint: disable=W0613, C0116
 # type: ignore[union-attr]
 
-"""Simple inline keyboard bot with multiple CallbackQueryHandlers.
-This Bot uses the Updater class to handle the bot.
-First, a few callback functions are defined as callback query handler. Then, those functions are
-passed to the Dispatcher and registered at their respective places.
-Then, the bot is started and runs until we press Ctrl-C on the command line.
+"""This is an inline keyboard bot with multiple CallbackQueryHandlers.
+This bot is a demo and is intended to recommend subjects to Bachelor's in Computer Science students.
+
 Usage:
-Example of a bot that uses inline keyboard that has multiple CallbackQueryHandlers arranged in a
-ConversationHandler.
 Send /start to initiate the conversation.
 Press Ctrl-C on the command line to stop the bot.
 """
-from logging import Logger
-import numpy as np
-import pandas as pd
-from os import name
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+
 from telegram.ext import (
     Updater,
     CommandHandler,
@@ -26,20 +18,14 @@ from telegram.ext import (
     CallbackContext,
 )
 from modules.data.data_reader import config_map
-from ContentBased import ContentBased
-from modules.Logger.logger import Logger
-from modules.utils.subjects import Subjects
-from modules.handlers.callback_handlers import (end, rate_best_subject, update_info, shift_menu_right, shift_menu_left)
+from modules.utils.subject_ratings import Subjects
+from modules.handlers.callback_handlers import (end, rate_best_subject, update_info, shift_menu_right, shift_menu_left, start_over)
 from modules.handlers.command_handler import start
 
 # Stages
 FIRST, SECOND = range(2)
-# Callback data
-ONE = 0
 # Subjects
 subjects: Subjects = Subjects.getInstance()
-# Dataset
-data = []
 
 ## COSE DA FARE
 # Aggiornare il file CSV
@@ -65,21 +51,21 @@ def main():
         entry_points=[CommandHandler('start', start)],
         states={
             FIRST: [
-                CallbackQueryHandler(rate_best_subject, pattern='^' + str(ONE) + '$'),
+                CallbackQueryHandler(rate_best_subject, pattern='^0$'),
                 CallbackQueryHandler(update_info, pattern='^[0-9][0-9]?\s-\sdelete$'),
-                CallbackQueryHandler(shift_menu_left, pattern='^LEFT$'),
-                CallbackQueryHandler(shift_menu_right, pattern='^RIGHT$'),
             ],
             SECOND: [
                 CallbackQueryHandler(end, pattern='^[0-9][0-9]?\s-\sdelete$'),
             ],
         },
-        fallbacks=[CommandHandler('start', start)],
+        fallbacks=[CallbackQueryHandler(start_over, pattern='^restart$')],
     )
 
     # Add ConversationHandler to dispatcher that will be used for handling
     # updates
     dispatcher.add_handler(conv_handler)
+    dispatcher.add_handler(CallbackQueryHandler(shift_menu_left, pattern='^LEFT$'))
+    dispatcher.add_handler(CallbackQueryHandler(shift_menu_right, pattern='^RIGHT$'))
 
     # Start the Bot
     updater.start_polling()
