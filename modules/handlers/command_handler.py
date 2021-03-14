@@ -1,9 +1,10 @@
+from logging import error
 from telegram.ext.callbackcontext import CallbackContext
 from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 from telegram.update import Update
 from modules.Logger.logger import Logger
-from modules.utils.subjects import Subjects
+from modules.utils.subject_ratings import Subjects
 
 
 def start(update: Update, context: CallbackContext) -> int:
@@ -17,6 +18,7 @@ def start(update: Update, context: CallbackContext) -> int:
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
+    context.user_data["index_list_subject_length"] = 4
     context.user_data["ratings"] = []
     context.user_data["subject_names"] = []
     Subjects.getInstance().init_array(context.user_data["ratings"], context.user_data["subject_names"])
