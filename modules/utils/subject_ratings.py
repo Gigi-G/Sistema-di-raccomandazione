@@ -45,9 +45,9 @@ class Subjects:
 
     def init_array(self, ratings: list, subject_names: list) -> None:
         for key in self.__subjects:
-            subject_names.append(self.__subjects[key])
+            subject_names.append(key)
             ratings.append(0)
 
 
-    def delete_subject_name(self, name: str, context: CallbackContext) -> None:
-        context.user_data["subject_names"].remove(name)
+    def delete_subject_name(self, index: str, context: CallbackContext) -> None:
+        context.user_data["subject_names"].remove(index)
