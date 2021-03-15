@@ -1,5 +1,5 @@
 from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
-from ContentBased import ContentBased
+from modules.recommender_system.recommender_system import recommender_system
 import random
 import numpy as np
 from modules.utils.subject_ratings import Subjects
@@ -9,29 +9,6 @@ from telegram.ext.callbackcontext import CallbackContext
 from telegram.ext.conversationhandler import ConversationHandler
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 from telegram.update import Update
-
-
-def predict(cb: ContentBased, context: CallbackContext) -> None:
-    i:int = 0
-    while(i < len(context.user_data["ratings"])):
-        if(context.user_data["ratings"][i] == 0):
-            context.user_data["ratings"][i] = cb.predict(14, i)
-        i += 1
-
-
-def create_new_row(context: CallbackContext) -> list:
-    row = np.array(context.user_data["ratings"])
-    row = row.astype('float')
-    row[row == 0] = np.NaN
-    return row.tolist()
-
-
-def recommender_system(context: CallbackContext) -> list:
-    Subjects.getInstance().get_data().loc[context.user_data["username"]] = create_new_row(context)
-    Logger.getInstance().info(Subjects.getInstance().get_data())
-    cb = ContentBased("./Dati/subjects.csv", data=Subjects.getInstance().get_data())
-    predict(cb, context)
-    return (np.argsort(context.user_data["ratings"]).tolist()[::-1])[0:5]
 
 
 def shift_menu_left(update: Update, context: CallbackContext) -> int:
@@ -48,6 +25,7 @@ def shift_menu_right(update: Update, context: CallbackContext) -> int:
     reply_markup = InlineKeyboardMarkup(create_keyboard(context, 1, Subjects.getInstance().get_subjects()))
     query.edit_message_text(text=query.message.text, reply_markup=reply_markup)
     return 0
+
 
 def rate_best_subject(update: Update, context: CallbackContext) -> int:
         context.user_data["rate_number"] = random.randint(0, 2)
@@ -114,7 +92,7 @@ def end(update: Update, context: CallbackContext) -> int:
 def start_over(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
     query.answer()
-    Logger.getInstance().info("L'utente " + context.user_data["username"] + " ha iniziato la conversazione.")
+    Logger.getInstance().info("L'utente " + context.user_data["username"] + " ha ricominciato la conversazione.")
     keyboard = [
         [
             InlineKeyboardButton("LINK", url="http://web.dmi.unict.it/corsi/l-31/programmi"),
