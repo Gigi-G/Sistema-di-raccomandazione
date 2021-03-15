@@ -27,9 +27,6 @@ FIRST, SECOND = range(2)
 # Subjects
 subjects: Subjects = Subjects.getInstance()
 
-## COSE DA FARE
-# Aggiornare il file CSV
-
 
 def main():
     # Create the Updater and pass it your bot's token.
