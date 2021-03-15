@@ -9,14 +9,12 @@ class Subjects:
 
     @staticmethod
     def getInstance():
-        """ Static access method. """
         if Subjects.__instance == None:
             Subjects()
         return Subjects.__instance
 
 
     def __init__(self) -> None:
-        """ Virtually private constructor. """
         if Subjects.__instance == None:
             Subjects.__instance = self
 
