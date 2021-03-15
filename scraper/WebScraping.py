@@ -1,7 +1,5 @@
 from urllib.request import urlopen as uRequest
 from bs4 import BeautifulSoup as soup
-import bs4
-import pdftotext
 
 class WebScraping:
     

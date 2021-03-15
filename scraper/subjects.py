@@ -1,7 +1,6 @@
 import sys
-from scraper.WebScraping import WebScraping
-from scraper.Extractor import Extractor
-import pandas as pd
+from WebScraping import WebScraping
+from Extractor import Extractor
 
 def __check_error_input(args:str) -> str:
     if len(args) != 2:
@@ -26,7 +25,7 @@ def __print_help() -> None:
 def main(args:str) -> None:
     url:str = __check_error_input(args)
     print("Extracting subjects...")
-    Extractor(WebScraping(url).extract_subjects()).extract_data_frame().to_csv("../Dati/subjects.csv", index = False)
+    Extractor(WebScraping(url).extract_subjects()).extract_data_frame().to_csv("./Dati/subjects.csv", index = False)
     print("DONE!\n")
 
 if __name__ == "__main__":

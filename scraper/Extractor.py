@@ -1,5 +1,5 @@
-from scraper.WebScraping import WebScraping
-from scraper.FormatPDF import FormatPDF
+from WebScraping import WebScraping
+from FormatPDF import FormatPDF
 import os
 import pandas as pd
 
