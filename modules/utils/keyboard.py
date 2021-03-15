@@ -1,6 +1,7 @@
 from telegram.ext.callbackcontext import CallbackContext
 from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 
+
 def create_keyboard(context: CallbackContext, direction: int, subjects: dict) -> list:
     keyboard_subject: list = []
     list_length = context.user_data["index_list_subject_length"]
