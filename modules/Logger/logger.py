@@ -7,14 +7,12 @@ class Logger:
 
     @staticmethod 
     def getInstance():
-        """ Static access method. """
         if Logger.__instance == None:
             Logger()
         return Logger.__instance
 
 
     def __init__(self):
-        """Virtually private constructor."""
         if Logger.__instance == None:
             logging.basicConfig(
                 format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
