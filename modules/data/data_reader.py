@@ -1,4 +1,3 @@
-"""Read token from file"""
 from ruamel.yaml import YAML
 from pathlib import Path
 
