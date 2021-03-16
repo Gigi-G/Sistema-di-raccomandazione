@@ -2,7 +2,7 @@ import sys
 from WebScraping import WebScraping
 from Extractor import Extractor
 
-def __check_error_input(args:str) -> str:
+def __check_error_input(args: str) -> str:
     if len(args) != 2:
         __print_help()
     i:int = 0
@@ -17,12 +17,12 @@ def __check_error_input(args:str) -> str:
     return url
 
 def __print_help() -> None:
-    h:str = "\nUsage: python3 subjects -url <url>\n\n"
+    h:str = "\nUsage: python3 subjects.py -url <url>\n\n"
     h += "-url:\tIt is the site where we want to get the subjects\n"
     print(h)
     exit(-1)
 
-def main(args:str) -> None:
+def main(args: str) -> None:
     url:str = __check_error_input(args)
     print("Extracting subjects...")
     Extractor(WebScraping(url).extract_subjects()).extract_data_frame().to_csv("./Dati/subjects.csv", index = False)

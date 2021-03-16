@@ -4,10 +4,10 @@ import os
 import pandas as pd
 
 class Extractor:
-    def __init__(self, subjects:list):
+    def __init__(self, subjects: list):
         self.subjects = subjects
 
-    def __extract_subject_description(self, text:list) -> str:
+    def __extract_subject_description(self, text: list) -> str:
         i:int = 0
         while(text[i].upper() != "CONTENUTI DEL CORSO"):
             i += 1
@@ -20,7 +20,6 @@ class Extractor:
             i += 1
         i += 3
         while(text[i].upper() != "VERIFICA DELL'APPRENDIMENTO"):
-            #print(text[i][1:].strip())
             if text[i] != None:
                 description += text[i][3:].strip() + " "
             i += 1

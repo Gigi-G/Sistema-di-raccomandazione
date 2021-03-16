@@ -3,19 +3,13 @@ from bs4 import BeautifulSoup as soup
 
 class WebScraping:
     
-    def __init__(self, url:str):
+    def __init__(self, url: str):
         self.url = url
         u_client = uRequest(url)
         self.page_html = u_client.read()
         self.page_soup = soup(self.page_html, features="lxml")
     
-    def __get_base_path(self) -> str:
-        result:str = ""
-        for k in self.url.split("/")[0:-3]:
-            result += (k + "/")
-        return result[0:-1]
-
-    def __create_link(self, link) -> str:
+    def __create_link(self, link: str) -> str:
         result:str = ""
         split:list = link.split("/")
         for k in split[0:-1]:
@@ -38,5 +32,5 @@ class WebScraping:
                 subjects.append(subject)
         return subjects
 
-    def create_pdf(self, name) -> None:
+    def create_pdf(self, name: str) -> None:
         open(name + ".pdf", 'wb').write(self.page_html)
