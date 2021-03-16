@@ -23,7 +23,7 @@ class Subjects:
         return self.__subjects
 
     
-    def get_data(self):
+    def get_data(self) -> any:
         return self.__data
 
 
