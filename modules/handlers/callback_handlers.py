@@ -54,13 +54,13 @@ def rate_subject(query, context: CallbackContext) -> int:
     return 0
 
 
-def update_rating(index:str, context: CallbackContext) -> None:
+def update_rating(index: str, context: CallbackContext) -> None:
     context.user_data["ratings"][int(index)] = context.user_data["rate"]
     Logger.getInstance().info("L'utente " + context.user_data["username"] + " ha dato un voto pari a " + str(context.user_data["rate"]) + 
     " a " + Subjects.getInstance().get_subjects()[index] + ".")
 
 
-def update_info(update: Update, context: CallbackContext) -> None:
+def update_info(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
     query.answer()
     index = update.callback_query.data.split(" - ")[0]
