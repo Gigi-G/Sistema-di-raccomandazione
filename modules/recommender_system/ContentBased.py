@@ -13,7 +13,6 @@ class ContentBased():
         elif(data is not None):
             self.data = data
             self.utility_matrix = data
-            #self.utility_matrix = self.data.pivot_table(index='user_id', columns='subject_id', values='rating')
         else:
             print("Error in data initialization!")
             exit(-1)
@@ -21,15 +20,12 @@ class ContentBased():
         self.__build_user_profiles()
 
     def __build_tfidf_matrix(self, subjects_filename) -> None:
-        #"/home/gigi-g/Sistema di raccomandazione/subjects.csv"
         ds = pd.read_csv(subjects_filename)
         tf = TfidfVectorizer(stop_words = get_stop_words("italian"))
         self.tfidf_matrix = tf.fit_transform([(k.split(" - ")[1]) for k in ds['description']])
-        #np.array(self.tfidf_matrix.todense())
         self.tfidf_matrix = np.where(np.array(self.tfidf_matrix.todense()) > self.threshold, 1, 0)
     
     def __build_utility_matrix(self, data_filename) -> None:
-        #"/home/gigi-g/Sistema di raccomandazione/Dati.csv"
         self.data = pd.read_csv(data_filename)
         self.utility_matrix = self.data.pivot_table(index='user_id', columns='subject_id', values='rating')
 
@@ -48,7 +44,6 @@ class ContentBased():
     def __scale(self, X, x_min, x_max):
         nom = (X + 1) * (x_max - x_min)
         denom = 2
-        #denom[denom == 0] = 1
         return x_min + nom / denom
 
     def __cosine_distance(self, x, y) -> float:
