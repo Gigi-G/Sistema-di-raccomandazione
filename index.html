@@ -13241,7 +13241,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>DMI Subjects Recommender System (DSRS) è un bot Telegram che permette di raccomandare agli studenti del corso di laurea in Informatica, presso l'università degli studi di Catania, quali sono le materia del terzo anno che potrebbero essere di loro interesse sfruttando il sistema di raccomandazione <strong>Content Based</strong>.</p>
+<p>DMI Subjects Recommender System (DSRS) è un bot Telegram che permette di raccomandare agli studenti del corso di laurea in Informatica, presso l'università degli studi di Catania, quali sono le materie del terzo anno che potrebbero essere di loro interesse sfruttando il sistema di raccomandazione <strong>Content Based</strong>.</p>
 
 </div>
 </div>
@@ -13537,7 +13537,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In questo file è stata definita la classe <strong>Extractor</strong> che permette di estrarre le descrizioni di ogni materia a partire da un file PDF e di creare un dataframe con la struttura del file CSV. La lettura del PDF è facilitata dall'uso di <em>FormatPDF</em>.</p>
+<p>In questo file è stata definita la classe <strong>Extractor</strong> che permette di estrarre le descrizioni di ogni materia a partire da un file PDF e di creare un dataframe con la struttura del file CSV definito prima. La lettura del PDF è facilitata dall'uso di <em>FormatPDF</em>.</p>
 
 </div>
 </div>
@@ -13567,7 +13567,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Il metodo <strong>__extract_subject_description</strong> permette di estrarre la descrizione di una materia presente all'interno di un PDF. La funzione prende in ingresso una lista di frasi, che sono le righe di un PDF e ritorna una stringa.</p>
+<p>Il metodo <strong>__extract_subject_description</strong> permette di estrarre la descrizione di una materia presente all'interno di un PDF. La funzione prende in ingresso una lista di frasi, che sono le righe di un PDF, e ritorna una stringa.</p>
 
 </div>
 </div>
@@ -13647,7 +13647,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="FormatPDF">FormatPDF<a class="anchor-link" href="#FormatPDF">&#182;</a></h4>
+<h4 id="FormatPDF.py">FormatPDF.py<a class="anchor-link" href="#FormatPDF.py">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13851,7 +13851,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In questo file è stata definita la classe <strong>Logger</strong> che è un <em>Singleton</em> e serve per ottenere log.</p>
+<p>In questo file è stata definita la classe <strong>Logger</strong> che è un <em>Singleton</em> e serve per ottenere i log.</p>
 
 </div>
 </div>
@@ -14010,7 +14010,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La funzione <strong>rate_best_subject</strong> serve per ottenere la materia preferita di uno studente e stabilire quanti altri voti dovrà dare l'utente. L'utente darà da un minimo di 2 a un massimo di 4 voti.</p>
+<p>La funzione <strong>rate_best_subject</strong> serve per ottenere la materia preferita di uno studente e stabilire quanti altri voti dovrà dare. Lo studente darà da un minimo di 2 a un massimo di 4 voti.</p>
 
 </div>
 </div>
@@ -14097,7 +14097,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La funzione <strong>update_info</strong> richiama la funzione <em>update_rating</em> ed elemina dalla lista delle materie quella che è già stata valutata dallo studente, infine richiama la funzione <em>rate_subject</em>.</p>
+<p>La funzione <strong>update_info</strong> richiama la funzione <em>update_rating</em> ed elemina dalla lista <code>context.user_data["subject_names"]</code> quella materia che è già stata valutata dallo studente, infine richiama la funzione <em>rate_subject</em>.</p>
 
 </div>
 </div>
@@ -14456,7 +14456,7 @@ DONE!
 <ul>
 <li><code>subjects_filename</code>: che deve essere un file CSV con due colonne <em>id</em> e <em>description</em>, come quello presente in <em>./Dati/subjects.csv</em>.</li>
 <li><code>data_filename</code>: che deve essere un file CSV con quattro colonne: <em>user_id</em>, <em>subject_id</em>, <em>subject_name</em>, <em>rating</em>. Un file di esempio è quello presente in <em>./Dati/Dati.csv</em>.</li>
-<li><code>data</code>: il dataframe dove sono presenti i voti che degli studenti hanno dato alle materie attraverso un google form.</li>
+<li><code>data</code>: che deve essere un dataframe dove sono presenti i voti che degli studenti hanno dato alle materie.</li>
 <li><code>threshold</code>: un valore di soglia che serve per capire se una caratteristica è presente oppure no in una materia. Il valore di default è 0,22.</li>
 </ul>
 <p><code>data_filename</code> e <code>data</code> sono opzionali, ma almeno uno di loro deve essere presente.</p>
@@ -14492,7 +14492,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Il metodo <strong>__build_tfidf_matrix</strong> prende in ingresso il nome di un file, come <em>./Dati/subjects.csv</em>, e calcola TF-IDF per la descrizione di ogni materia e utilizzando il threshold si stabilisce se una caratteristica è presente (1) oppure non è presente (0). Quindi si ottiene una matrice binaria, dove ogni riga è il profilo di una materia.</p>
+<p>Il metodo <strong>__build_tfidf_matrix</strong> prende in ingresso il nome di un file, come <em>./Dati/subjects.csv</em>, e calcola TF-IDF sulla descrizione di ogni materia e utilizzando il threshold si stabilisce se una caratteristica è presente (1) oppure non è presente (0). Quindi si ottiene una matrice binaria, dove ogni riga è il profilo di una materia.</p>
 
 </div>
 </div>
@@ -14710,7 +14710,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La funzione <strong>predict</strong> calcolo il voto che uno studente darebbe a tutte quelle materie per cui non ha espresso un voto.</p>
+<p>La funzione <strong>predict</strong> calcola il voto che uno studente darebbe a tutte quelle materie per cui non ha espresso un voto.</p>
 
 </div>
 </div>
@@ -14878,7 +14878,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Per utilizzare lo scraper bisogna utilizzare il seguente comando:</p>
+<p>Per utilizzare lo scraper bisogna eseguire il seguente comando:</p>
 <div class="highlight"><pre><span></span>python3 scraper/subjects.py -url &lt;url&gt;
 </pre></div>
 <ul>
@@ -14916,7 +14916,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Per prima cosa bisogna inserire il token del proprio bot all'interno del file ./config/settings.yaml.dist e rinominare il file in settings.yaml.</p>
+<p>Per prima cosa bisogna inserire il token del proprio bot all'interno del file <strong>./config/settings.yaml.dist</strong> e rinominare il file in <code>settings.yaml</code>.</p>
 
 </div>
 </div>
@@ -14934,7 +14934,7 @@ DONE!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Per utilizzare lo scraper bisogna utilizzare il seguente comando:</p>
+<p>Per utilizzare lo scraper bisogna eseguire il seguente comando:</p>
 <div class="highlight"><pre><span></span>docker run --rm -it dmi_recommender_system scraper/subjects.py -url &lt;url&gt;
 </pre></div>
 <ul>
