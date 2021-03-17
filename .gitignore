@@ -1,4 +1,4 @@
 __pycache__
 config/settings.yaml
-users
+users/*
 log.txt
