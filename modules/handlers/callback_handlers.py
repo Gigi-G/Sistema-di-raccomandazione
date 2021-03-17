@@ -108,7 +108,7 @@ def start_over(update: Update, context: CallbackContext) -> int:
         text="Prima di iniziare è necessario che tu legga i programmi delle varie materie del 3° anno.\n" +
         "Questo è un passo fondamentale perché dopo ti verrà chiesto di valutarne alcuni!\n" +
         "Puoi cliccare nel bottone sottostante per raggiungere la pagina dei programmi.\n" +
-        "Dopo aver letto tutto attentamente clicca su \"Iniziamo!\"",
+        "Dopo aver letto tutto attentamente clicca su \"Iniziamo!\", ricorda che il range dei voti va da 1 (pessimo) a 5 (fantastico).",
         reply_markup=reply_markup
     )
     return 0
