@@ -6,4 +6,4 @@ lxml==4.6.3
 pandas==1.2.2
 python-telegram-bot==13.3
 stop-words==2018.7.23
-urllib3==1.25.9
+urllib3==1.26.5
